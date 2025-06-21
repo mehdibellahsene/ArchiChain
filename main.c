@@ -11,7 +11,7 @@
 static volatile int keep_running = 1;
 static AppState *global_app = NULL;
 
-void interrupt_handle2r(int sig) {
+void interrupt_handler(int sig) {
     (void)sig; // Suppress unused parameter warning
     keep_running = 0;
     printf("\n\nInterrupt received. Returning to main menu...\n");

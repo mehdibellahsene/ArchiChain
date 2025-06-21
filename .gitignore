@@ -1,0 +1,149 @@
+# Build directories and outputs
+build/
+cmake-build-*/
+bin/
+obj/
+out/
+
+# Executables
+*.exe
+*.out
+*.app
+archimed
+archimed.exe
+
+# Object files
+*.o
+*.obj
+*.ko
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Visual Studio
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# CLion
+cmake-build-*/
+
+# Code::Blocks
+*.depend
+*.layout
+*.cbp
+
+# Blockchain data files
+*.dat
+archimed_blockchain.dat
+archimed_wallet.dat
+
+# Log files
+*.log
+*.txt.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Package manager files
+conandata.txt
+conaninfo.txt
+conanbuildinfo.*
+
+# Test results
+test_results/
+*.xml
+
+# Coverage reports
+*.gcov
+*.gcda
+*.gcno
+coverage/
+
+# Profiling data
+*.prof
+gmon.out
+
+# Valgrind output
+*.memcheck
+*.callgrind
+
+# Static analysis
+cppcheck.xml
+*.sarif
+
+# Documentation build
+docs/_build/
+docs/html/
+docs/latex/
+
+# Local configuration overrides
+config.local.ini
+*.local
+
+# Backup files
+*.orig
