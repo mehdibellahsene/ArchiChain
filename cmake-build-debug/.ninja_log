@@ -1,0 +1,18 @@
+# ninja log v6
+2	114	7722380950561136	build.ninja	8820e14317a71119
+18	130	7722373348747224	CMakeFiles/archimed.dir/wallet.c.obj	30ebb6c99d37c849
+46	689	7722364386399199	CMakeFiles/archimed.dir/network.c.obj	392c431d50a5a659
+11	134	7722373348692353	CMakeFiles/archimed.dir/pi.c.obj	d8a8724f11c7c893
+19	95	7722127840626604	CMakeFiles/archimed.dir/utils.c.obj	ad86dab8a8149d2a
+3	142	7722372315244403	CMakeFiles/archimed.dir/main.c.obj	cc7854a958c624b9
+3	125	7722373348606053	CMakeFiles/archimed.dir/block.c.obj	a7cbba051e53d452
+134	447	7722373349913419	archimed.exe	d7f6cca33cb77dec
+54	723	7722364386469623	CMakeFiles/archimed.dir/performance.c.obj	5744c72a8823a930
+34	167	7722372315578938	CMakeFiles/archimed.dir/menu.c.obj	ec432eccef76a293
+3	136	7722380950561136	build.ninja	8820e14317a71119
+21	133	7722380951138045	CMakeFiles/archimed.dir/wallet.c.obj	30ebb6c99d37c849
+9	135	7722380951006497	CMakeFiles/archimed.dir/block.c.obj	a7cbba051e53d452
+15	138	7722380951073198	CMakeFiles/archimed.dir/pi.c.obj	d8a8724f11c7c893
+33	195	7722380951246180	CMakeFiles/archimed.dir/performance.c.obj	5744c72a8823a930
+27	586	7722380951193111	CMakeFiles/archimed.dir/network.c.obj	392c431d50a5a659
+13	138	7722381021645570	CMakeFiles/archimed.dir/menu.c.obj	ec432eccef76a293

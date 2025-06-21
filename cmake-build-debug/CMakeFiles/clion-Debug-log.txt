@@ -1,0 +1,4 @@
+C:\Users\mehdi\AppData\Local\Programs\CLion\bin\cmake\win\aarch64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/mehdi/AppData/Local/Programs/CLion/bin/ninja/win/aarch64/ninja.exe -G Ninja -S C:\Programmation\all_project_sync\archimed -B C:\Programmation\all_project_sync\archimed\cmake-build-debug
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Programmation/all_project_sync/archimed/cmake-build-debug
