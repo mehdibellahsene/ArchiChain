@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <inttypes.h>
 
 void print_app_banner(void) {
     printf("\n");
@@ -262,10 +263,9 @@ void handle_mine_blocks(AppState *app) {
         printf(">> Block %d mined successfully!\n", block_index);
         printf("   - Block Hash: %u\n", new_block->hash);
         printf("   - Pi Digits Calculated: %d\n", new_block->pi_digits_count);
-        printf("   - Nonce: %u\n", new_block->nonce);
-        if (app->performance_monitoring) {
+        printf("   - Nonce: %u\n", new_block->nonce);        if (app->performance_monitoring) {
             printf("   - Mining Time: %.4f seconds\n", app->performance.mining_time);
-            printf("   - Pi Digits/sec: %llu\n", app->performance.pi_digits_per_second);
+            printf("   - Pi Digits/sec: %" PRIu64 "\n", app->performance.pi_digits_per_second);
         }
         
         // Broadcast block to network
@@ -606,15 +606,16 @@ void handle_network_status(AppState *app) {
                 discover_peers(&app->network);
                 printf("Peer discovery initiated\n");
                 break;
-            case 2: {
-                char ip[16];
+            case 2: {                char ip[16];
                 int port;
                 printf("Enter peer IP: ");
-                fgets(ip, sizeof(ip), stdin);
-                ip[strcspn(ip, "\n")] = 0;
+                if (fgets(ip, sizeof(ip), stdin) != NULL) {
+                    ip[strcspn(ip, "\n")] = 0;
+                }
                 printf("Enter peer port: ");
-                fgets(input, sizeof(input), stdin);
-                sscanf(input, "%d", &port);
+                if (fgets(input, sizeof(input), stdin) != NULL) {
+                    sscanf(input, "%d", &port);
+                }
                 if (add_peer(&app->network, ip, port)) {
                     printf("Peer added successfully\n");
                 } else {
@@ -625,12 +626,13 @@ void handle_network_status(AppState *app) {
             case 3: {
                 char ip[16];
                 int port;
-                printf("Enter peer IP to remove: ");
-                fgets(ip, sizeof(ip), stdin);
-                ip[strcspn(ip, "\n")] = 0;
+                printf("Enter peer IP to remove: ");                if (fgets(ip, sizeof(ip), stdin) != NULL) {
+                    ip[strcspn(ip, "\n")] = 0;
+                }
                 printf("Enter peer port: ");
-                fgets(input, sizeof(input), stdin);
-                sscanf(input, "%d", &port);
+                if (fgets(input, sizeof(input), stdin) != NULL) {
+                    sscanf(input, "%d", &port);
+                }
                 if (remove_peer(&app->network, ip, port)) {
                     printf("Peer removed successfully\n");
                 } else {

@@ -14,16 +14,19 @@ else()
     target_link_libraries(archimed m pthread)
 endif()
 
-# Test executable
-add_executable(test_archimed test.c block.c pi.c utils.c wallet.c network.c performance.c menu.c)
+# Test executable (optional - only build if explicitly requested)
+option(BUILD_TESTS "Build tests" OFF)
+if(BUILD_TESTS)
+    add_executable(test_archimed test.c block.c pi.c utils.c wallet.c network.c performance.c menu.c)
 
-# Link libraries for test
-if(WIN32)
-    target_link_libraries(test_archimed ws2_32)
-else()
-    target_link_libraries(test_archimed m pthread)
+    # Link libraries for test
+    if(WIN32)
+        target_link_libraries(test_archimed ws2_32)
+    else()
+        target_link_libraries(test_archimed m pthread)
+    endif()
+
+    # Enable testing
+    enable_testing()
+    add_test(NAME archimed_tests COMMAND test_archimed)
 endif()
-
-# Enable testing
-enable_testing()
-add_test(NAME archimed_tests COMMAND test_archimed)

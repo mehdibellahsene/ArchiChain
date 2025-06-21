@@ -6,6 +6,7 @@
 #include <time.h>
 #include <string.h>
 #include <stdlib.h>
+#include <inttypes.h>
 
 // Forward declaration
 bool create_coinbase_transaction(Transaction *tx, const char *miner_address, uint64_t reward);
@@ -103,18 +104,16 @@ uint32_t calculate_block_hash(const Block *block) {
     
     char content[8192]; // Larger buffer for transactions
     int offset = 0;
-    
-    // Add basic block data
+      // Add basic block data
     offset += snprintf(content + offset, sizeof(content) - offset, 
-                      "%d%lld%d%s%u%u%s%llu", 
+                      "%d%lld%d%s%u%u%s%" PRIu64, 
                       block->index, (long long)block->timestamp, block->difficulty, 
                       block->pi_digits ? block->pi_digits : "", block->prev_hash, 
                       block->nonce, block->miner_address, block->mining_reward);
     
-    // Add transaction data
-    for (int i = 0; i < block->transaction_count && offset < sizeof(content) - 100; i++) {
+    // Add transaction data    for (int i = 0; i < block->transaction_count && offset < sizeof(content) - 100; i++) {
         offset += snprintf(content + offset, sizeof(content) - offset,
-                          "%s%s%llu%u", 
+                          "%s%s%" PRIu64 "%u", 
                           block->transactions[i].from_address,
                           block->transactions[i].to_address,
                           block->transactions[i].amount,
@@ -182,9 +181,8 @@ void print_block(const Block *block) {
     printf("| Block Hash     : %-20u                                      |\n", block->hash);
     printf("| Nonce          : %-20u                                      |\n", block->nonce);
     printf("| Miner Address  : %-50s      |\n", block->miner_address);
-    printf("| Mining Reward  : %-50s      |\n", reward_str);
-    printf("| Transactions   : %-10d                                            |\n", block->transaction_count);
-    printf("| Total Difficulty: %-20llu                                     |\n", block->total_difficulty);
+    printf("| Mining Reward  : %-50s      |\n", reward_str);    printf("| Transactions   : %-10d                                            |\n", block->transaction_count);
+    printf("| Total Difficulty: %-20" PRIu64 "                                     |\n", block->total_difficulty);
     printf("+==============================================================================+\n");
     
     // Show transactions

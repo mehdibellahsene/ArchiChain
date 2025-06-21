@@ -1,5 +1,3 @@
 C:/Programmation/all_project_sync/archimed/cmake-build-debug/CMakeFiles/archimed.dir
-C:/Programmation/all_project_sync/archimed/cmake-build-debug/CMakeFiles/test_archimed.dir
-C:/Programmation/all_project_sync/archimed/cmake-build-debug/CMakeFiles/test.dir
 C:/Programmation/all_project_sync/archimed/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Programmation/all_project_sync/archimed/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -125,103 +125,6 @@ build archimed.exe: C_EXECUTABLE_LINKER__archimed_Debug CMakeFiles\archimed.dir\
   TARGET_IMPLIB = archimed.lib
   TARGET_PDB = archimed.pdb
 
-# =============================================================================
-# Object build statements for EXECUTABLE target test_archimed
-
-
-#############################################
-# Order-only phony target for test_archimed
-
-build cmake_object_order_depends_target_test_archimed: phony || .
-
-build CMakeFiles\test_archimed.dir\test.c.obj: C_COMPILER__test_archimed_unscanned_Debug C$:\Programmation\all_project_sync\archimed\test.c || cmake_object_order_depends_target_test_archimed
-  FLAGS = /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -std:c17 -MDd
-  OBJECT_DIR = CMakeFiles\test_archimed.dir
-  OBJECT_FILE_DIR = CMakeFiles\test_archimed.dir
-  TARGET_COMPILE_PDB = CMakeFiles\test_archimed.dir\
-  TARGET_PDB = test_archimed.pdb
-
-build CMakeFiles\test_archimed.dir\block.c.obj: C_COMPILER__test_archimed_unscanned_Debug C$:\Programmation\all_project_sync\archimed\block.c || cmake_object_order_depends_target_test_archimed
-  FLAGS = /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -std:c17 -MDd
-  OBJECT_DIR = CMakeFiles\test_archimed.dir
-  OBJECT_FILE_DIR = CMakeFiles\test_archimed.dir
-  TARGET_COMPILE_PDB = CMakeFiles\test_archimed.dir\
-  TARGET_PDB = test_archimed.pdb
-
-build CMakeFiles\test_archimed.dir\pi.c.obj: C_COMPILER__test_archimed_unscanned_Debug C$:\Programmation\all_project_sync\archimed\pi.c || cmake_object_order_depends_target_test_archimed
-  FLAGS = /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -std:c17 -MDd
-  OBJECT_DIR = CMakeFiles\test_archimed.dir
-  OBJECT_FILE_DIR = CMakeFiles\test_archimed.dir
-  TARGET_COMPILE_PDB = CMakeFiles\test_archimed.dir\
-  TARGET_PDB = test_archimed.pdb
-
-build CMakeFiles\test_archimed.dir\utils.c.obj: C_COMPILER__test_archimed_unscanned_Debug C$:\Programmation\all_project_sync\archimed\utils.c || cmake_object_order_depends_target_test_archimed
-  FLAGS = /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -std:c17 -MDd
-  OBJECT_DIR = CMakeFiles\test_archimed.dir
-  OBJECT_FILE_DIR = CMakeFiles\test_archimed.dir
-  TARGET_COMPILE_PDB = CMakeFiles\test_archimed.dir\
-  TARGET_PDB = test_archimed.pdb
-
-build CMakeFiles\test_archimed.dir\wallet.c.obj: C_COMPILER__test_archimed_unscanned_Debug C$:\Programmation\all_project_sync\archimed\wallet.c || cmake_object_order_depends_target_test_archimed
-  FLAGS = /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -std:c17 -MDd
-  OBJECT_DIR = CMakeFiles\test_archimed.dir
-  OBJECT_FILE_DIR = CMakeFiles\test_archimed.dir
-  TARGET_COMPILE_PDB = CMakeFiles\test_archimed.dir\
-  TARGET_PDB = test_archimed.pdb
-
-build CMakeFiles\test_archimed.dir\network.c.obj: C_COMPILER__test_archimed_unscanned_Debug C$:\Programmation\all_project_sync\archimed\network.c || cmake_object_order_depends_target_test_archimed
-  FLAGS = /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -std:c17 -MDd
-  OBJECT_DIR = CMakeFiles\test_archimed.dir
-  OBJECT_FILE_DIR = CMakeFiles\test_archimed.dir
-  TARGET_COMPILE_PDB = CMakeFiles\test_archimed.dir\
-  TARGET_PDB = test_archimed.pdb
-
-build CMakeFiles\test_archimed.dir\performance.c.obj: C_COMPILER__test_archimed_unscanned_Debug C$:\Programmation\all_project_sync\archimed\performance.c || cmake_object_order_depends_target_test_archimed
-  FLAGS = /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -std:c17 -MDd
-  OBJECT_DIR = CMakeFiles\test_archimed.dir
-  OBJECT_FILE_DIR = CMakeFiles\test_archimed.dir
-  TARGET_COMPILE_PDB = CMakeFiles\test_archimed.dir\
-  TARGET_PDB = test_archimed.pdb
-
-build CMakeFiles\test_archimed.dir\menu.c.obj: C_COMPILER__test_archimed_unscanned_Debug C$:\Programmation\all_project_sync\archimed\menu.c || cmake_object_order_depends_target_test_archimed
-  FLAGS = /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -std:c17 -MDd
-  OBJECT_DIR = CMakeFiles\test_archimed.dir
-  OBJECT_FILE_DIR = CMakeFiles\test_archimed.dir
-  TARGET_COMPILE_PDB = CMakeFiles\test_archimed.dir\
-  TARGET_PDB = test_archimed.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target test_archimed
-
-
-#############################################
-# Link the executable test_archimed.exe
-
-build test_archimed.exe: C_EXECUTABLE_LINKER__test_archimed_Debug CMakeFiles\test_archimed.dir\test.c.obj CMakeFiles\test_archimed.dir\block.c.obj CMakeFiles\test_archimed.dir\pi.c.obj CMakeFiles\test_archimed.dir\utils.c.obj CMakeFiles\test_archimed.dir\wallet.c.obj CMakeFiles\test_archimed.dir\network.c.obj CMakeFiles\test_archimed.dir\performance.c.obj CMakeFiles\test_archimed.dir\menu.c.obj
-  FLAGS = /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd
-  LINK_FLAGS = /machine:ARM64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\test_archimed.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\test_archimed.dir\
-  TARGET_FILE = test_archimed.exe
-  TARGET_IMPLIB = test_archimed.lib
-  TARGET_PDB = test_archimed.pdb
-
-
-#############################################
-# Utility command for test
-
-build CMakeFiles\test.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Programmation\all_project_sync\archimed\cmake-build-debug && C:\Users\mehdi\AppData\Local\Programs\CLion\bin\cmake\win\aarch64\bin\ctest.exe --force-new-ctest-process "
-  DESC = Running tests...
-  pool = console
-  restat = 1
-
-build test: phony CMakeFiles\test.util
-
 
 #############################################
 # Utility command for edit_cache
@@ -250,8 +153,6 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 build archimed: phony archimed.exe
 
-build test_archimed: phony test_archimed.exe
-
 # =============================================================================
 # Folder targets.
 
@@ -260,7 +161,7 @@ build test_archimed: phony test_archimed.exe
 #############################################
 # Folder: C:/Programmation/all_project_sync/archimed/cmake-build-debug
 
-build all: phony archimed.exe test_archimed.exe
+build all: phony archimed.exe
 
 # =============================================================================
 # Built-in targets

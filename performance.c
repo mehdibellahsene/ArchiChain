@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <inttypes.h>
 
 // Initialize performance metrics
 void init_performance_metrics(PerformanceMetrics *pm) {
@@ -39,10 +40,9 @@ void print_performance_report(const PerformanceMetrics *pm) {
     
     printf("+==============================================================================+\n");
     printf("|                           PERFORMANCE REPORT                                |\n");
-    printf("+==============================================================================+\n");
-    printf("| Mining Time       : %.4f seconds                                       |\n", pm->mining_time);
-    printf("| Pi Digits/sec     : %llu                                               |\n", pm->pi_digits_per_second);
-    printf("| Hashes/sec        : %llu                                               |\n", pm->hashes_per_second);
+    printf("+==============================================================================+\n");    printf("| Mining Time       : %.4f seconds                                       |\n", pm->mining_time);
+    printf("| Pi Digits/sec     : %" PRIu64 "                                               |\n", pm->pi_digits_per_second);
+    printf("| Hashes/sec        : %" PRIu64 "                                               |\n", pm->hashes_per_second);
     printf("| Hash Time         : %.6f seconds                                       |\n", pm->hash_time);
     printf("| Pi Calc Time      : %.6f seconds                                       |\n", pm->pi_calculation_time);
     printf("+==============================================================================+\n");

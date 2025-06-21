@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Build tests
+BUILD_TESTS:BOOL=OFF
+
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.42.34433/bin/Hostarm64/arm64/lib.exe
 

@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <inttypes.h>
 
 // Initialize reward system with Bitcoin-like parameters
 void init_reward_system(RewardSystem *rs) {
@@ -83,10 +84,9 @@ bool create_transaction(Transaction *tx, const char *from, const char *to, uint6
     tx->amount = amount;
     tx->timestamp = time(NULL);
     tx->is_coinbase = false;
-    
-    // Calculate transaction hash
+      // Calculate transaction hash
     char tx_data[256];
-    snprintf(tx_data, sizeof(tx_data), "%s%s%llu%lld", 
+    snprintf(tx_data, sizeof(tx_data), "%s%s%" PRIu64 "%lld", 
              tx->from_address, tx->to_address, tx->amount, (long long)tx->timestamp);
     tx->hash = simple_hash(tx_data);
     
@@ -104,10 +104,9 @@ bool create_coinbase_transaction(Transaction *tx, const char *miner_address, uin
     tx->amount = reward;
     tx->timestamp = time(NULL);
     tx->is_coinbase = true;
-    
-    // Calculate transaction hash
+      // Calculate transaction hash
     char tx_data[256];
-    snprintf(tx_data, sizeof(tx_data), "COINBASE%s%llu%lld", 
+    snprintf(tx_data, sizeof(tx_data), "COINBASE%s%" PRIu64 "%lld", 
              tx->to_address, tx->amount, (long long)tx->timestamp);
     tx->hash = simple_hash(tx_data);
     
@@ -162,10 +161,9 @@ void format_amount(uint64_t amount, char *buffer, size_t buffer_size) {
     if (buffer == NULL) return;
     
     // Convert from smallest units to coins (divide by 100,000,000)
-    uint64_t coins = amount / 100000000ULL;
-    uint64_t fractions = amount % 100000000ULL;
+    uint64_t coins = amount / 100000000ULL;    uint64_t fractions = amount % 100000000ULL;
     
-    snprintf(buffer, buffer_size, "%llu.%08llu ARC", coins, fractions);
+    snprintf(buffer, buffer_size, "%" PRIu64 ".%08" PRIu64 " ARC", coins, fractions);
 }
 
 // Parse amount from string
